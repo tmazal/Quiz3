@@ -1,4 +1,6 @@
 package main.java;
+import exceptions.java.TriangleException;
+
 /**
  * 
  * @author Toby
@@ -10,13 +12,13 @@ public class Triangle extends GeometricObject{
 	private double side2 = 1.0;
 	private double side3 = 1.0;
 	
-	public Triangle() throws Exception {
+	public Triangle() throws TriangleException {
 		Triangle Tri = new Triangle(side1,side2,side3);
 	}		
 		
-	public Triangle(double side1,double side2,double side3) throws Exception {
+	public Triangle(double side1,double side2,double side3) throws TriangleException {
 		if (side1+side2 <= side3 || side2+side3 <= side1 || side1+side3 <= side2){
-			throw new Exception("These are impossible triangle dimensions.");
+			throw new TriangleException();
 		}
 		this.side1 = side1;
 		this.side2 = side2;

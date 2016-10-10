@@ -9,6 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import main.java.Triangle;
+import exceptions.java.TriangleException;
 
 public class TestTriangle {
 	
@@ -29,8 +30,8 @@ public class TestTriangle {
 	}
 	
 
-	@Test (expected = Exception.class)
-	public void testException() throws Exception{
+	@Test (expected = TriangleException.class)
+	public void TestException() throws Exception{
 		new Triangle(1,2,5);
 	}
 	
