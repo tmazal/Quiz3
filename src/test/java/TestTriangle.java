@@ -29,7 +29,6 @@ public class TestTriangle {
 	public void tearDown() throws Exception {
 	}
 	
-
 	@Test (expected = TriangleException.class)
 	public void TestException() throws Exception{
 		new Triangle(1,2,5);
