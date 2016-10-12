@@ -11,7 +11,7 @@ import org.junit.Test;
 import main.java.Triangle;
 import exceptions.java.TriangleException;
 
-public class TestTriangle {
+public class TriangleTest {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -40,7 +40,7 @@ public class TestTriangle {
 			Triangle Tri1 = new Triangle(8,15,17);
 			assertTrue(Tri1.getArea() == 60.0);
 		}
-		catch (Exception e){
+		catch (TriangleException e){
 			e.printStackTrace();
 		}
 	}	
@@ -51,7 +51,7 @@ public class TestTriangle {
 			Triangle Tri1 = new Triangle(8,15,17);
 			assertTrue(Tri1.getPerimeter() == 40.0);
 		}
-		catch (Exception e){
+		catch (TriangleException e){
 			e.printStackTrace();
 		}
 	}
@@ -62,7 +62,7 @@ public class TestTriangle {
 			Triangle Tri1 = new Triangle(8,15,17);
 			assertTrue(Tri1.toString().equals("The triangle has a perimeter of: 40.0 units and an area of : 60.0 units squared."));
 		}
-		catch (Exception e){
+		catch (TriangleException e){
 			e.printStackTrace();
 		}
 	}	
